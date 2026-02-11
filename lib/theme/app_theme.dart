@@ -13,7 +13,7 @@ var lightTheme = AppTheme(
     colorPrimary: primaryColor,
     colorBlack: Colors.black,
     colorWhite: Colors.white,
-    colorWhite2: Colors.white70,
+    colorWhite2: Colors.white.withValues(alpha: 0.45),
     colorText: const Color(0xff2D3333),
     colorTextLabel: const Color(0xff9F9F9F),
     colorBorder: const Color(0xFFD9D9D9),

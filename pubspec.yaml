@@ -64,3 +64,8 @@ flutter:
     - assets/
     - assets/images/
     - assets/svg/
+  fonts:
+    - family: PlusJakartaSans
+      fonts:
+        - asset: assets/fonts/PlusJakartaSans_Regular.ttf
+          weight: 400

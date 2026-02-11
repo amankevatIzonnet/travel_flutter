@@ -23,9 +23,7 @@ class MyApp extends StatelessWidget {
             return MaterialApp.router(
               debugShowCheckedModeBanner: false,
               routerConfig: AppRouter.router,
-              builder:(context, child) {
-                return SafeArea(child: child!);
-              },
+              
               theme: ThemeProvider.themeOf(context).data.copyWith(
                 textTheme: textThemes(context),
               ),

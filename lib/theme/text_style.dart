@@ -9,7 +9,7 @@ TextTheme textThemes(BuildContext context) {
         fontWeight: FontWeight.w700,
         fontSize: 16,
         color: context.themeOption.colorBlack,
-        fontFamily: "LatoFont"),
+        fontFamily: "PlusJakartaSans"),
     titleMedium: TextStyle(
         fontWeight: FontWeight.w700,
         fontSize: 17,
@@ -17,7 +17,7 @@ TextTheme textThemes(BuildContext context) {
         fontFamily: "LatoFont"),
     titleLarge: TextStyle(
         fontWeight: FontWeight.w700,
-        fontSize: 22,
+        fontSize: 24,
         color: context.themeOption.colorBlack,
         fontFamily: "LatoFont"),
     labelSmall: TextStyle(

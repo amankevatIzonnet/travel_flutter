@@ -4,6 +4,7 @@ import 'package:travel_flutter/core/config/route_names.dart';
 import 'package:travel_flutter/core/config/route_paths.dart';
 import 'package:travel_flutter/presentation/splash_screen.dart';
 import 'package:travel_flutter/presentation/views/auth/view/login_screen.dart';
+import 'package:travel_flutter/presentation/views/auth/view/register_screen.dart';
 import 'package:travel_flutter/presentation/views/home/view/home_screen.dart';
 import 'package:travel_flutter/presentation/views/onboarding/view/onboarding_screen.dart';
 import 'package:travel_flutter/presentation/views/profile/view/profile_screen.dart';
@@ -36,6 +37,11 @@ class AppRouter {
           path: RoutePaths.login,
           name: RouteNames.login,
           pageBuilder: (context,state) => MaterialPage(child: LoginScreen()),
+        ),
+        GoRoute(
+          path: RoutePaths.register,
+          name: RouteNames.register,
+          pageBuilder: (context,state) => MaterialPage(child: RegisterScreen()),
         ),
       ],
     );

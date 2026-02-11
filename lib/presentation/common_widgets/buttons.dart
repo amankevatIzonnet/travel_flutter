@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:travel_flutter/utils/extensions.dart';
 
 Widget iconButton(Widget icon,String text,Function() onTap,{Color? backgroundColor,Color? fontColor}){
@@ -48,5 +49,15 @@ Widget button(String text, Function() onTap) {
         ),
       );
     },
+  );
+}
+Widget backButton({Function()? onPressed}){
+  return Builder(
+    builder: (context) {
+      return IconButton(
+        onPressed: onPressed ?? context.pop,
+        icon: Icon(Icons.arrow_back_ios)
+      );
+    }
   );
 }

@@ -8,6 +8,7 @@ Widget textFieldInput({
   Widget? prefixIcon,
   Widget? suffixIcon,
   bool obscureText = false,
+  Color? backgroundColor,
 }){
   return Builder(
     builder: (context) {
@@ -19,7 +20,7 @@ Widget textFieldInput({
           decoration: InputDecoration(
             hintText: hintText,
             filled: true,
-            fillColor: context.themeOption.colorWhite2,
+            fillColor: backgroundColor ?? context.themeOption.colorWhite2,
             hintStyle: TextStyle(color: context.themeOption.colorHintText),
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,
