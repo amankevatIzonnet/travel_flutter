@@ -12,6 +12,7 @@ var lightTheme = AppTheme(
   options: ThemeOptions(
     colorPrimary: primaryColor,
     colorBlack: Colors.black,
+    colorBlack2: const Color(0xFF0F1729),
     colorWhite: Colors.white,
     colorWhite2: Colors.white.withValues(alpha: 0.45),
     colorText: const Color(0xff2D3333),
@@ -29,6 +30,7 @@ var darkTheme = AppTheme(
   options: ThemeOptions(
     colorPrimary: primaryColor,
     colorBlack: Colors.white,
+    colorBlack2: Colors.white,
     colorWhite: Colors.black,
     colorWhite2: Colors.black.withValues(alpha: 0.35),
     colorText: const Color(0xffe3e5e5),
@@ -43,6 +45,7 @@ var darkTheme = AppTheme(
 class ThemeOptions implements AppThemeOptions {
   final Color colorPrimary;
   final Color colorBlack;
+  final Color colorBlack2;
   final Color colorWhite;
   final Color colorText;
   final Color colorTextLabel;
@@ -56,6 +59,6 @@ class ThemeOptions implements AppThemeOptions {
     required this.colorBlack,
     required this.colorText,
     required this.colorTextLabel,
-    required this.colorWhite, required this.colorWhite2, required this.colorBorder, required this.colorHintText, required this.colorRed,
+    required this.colorWhite, required this.colorWhite2, required this.colorBorder, required this.colorHintText, required this.colorRed, required this.colorBlack2,
   });
 }

@@ -56,7 +56,7 @@ Widget backButton({Function()? onPressed}){
     builder: (context) {
       return IconButton(
         onPressed: onPressed ?? context.pop,
-        icon: Icon(Icons.arrow_back_ios)
+        icon: Icon(Icons.arrow_back_ios),
       );
     }
   );
