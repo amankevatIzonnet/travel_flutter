@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:theme_provider/theme_provider.dart';
 
@@ -19,7 +17,7 @@ var lightTheme = AppTheme(
     colorTextLabel: const Color(0xff9F9F9F),
     colorBorder: const Color(0xFFD9D9D9),
     colorHintText: const Color(0xFFA2A9B4),
-    colorRed: Colors.red
+    colorRed: Colors.red,
   ),
 );
 
@@ -31,14 +29,13 @@ var darkTheme = AppTheme(
     colorPrimary: primaryColor,
     colorBlack: Colors.white,
     colorBlack2: Colors.white,
-    colorWhite: Colors.black,
+    colorWhite: const Color(0xFF101922),
     colorWhite2: Colors.black.withValues(alpha: 0.35),
     colorText: const Color(0xffe3e5e5),
     colorTextLabel: const Color(0xff9F9F9F),
     colorBorder: const Color(0xFFF5F5F5),
     colorHintText: const Color(0xFFF5F5F5),
-    colorRed: Colors.red
-
+    colorRed: Colors.red,
   ),
 );
 
@@ -59,6 +56,11 @@ class ThemeOptions implements AppThemeOptions {
     required this.colorBlack,
     required this.colorText,
     required this.colorTextLabel,
-    required this.colorWhite, required this.colorWhite2, required this.colorBorder, required this.colorHintText, required this.colorRed, required this.colorBlack2,
+    required this.colorWhite,
+    required this.colorWhite2,
+    required this.colorBorder,
+    required this.colorHintText,
+    required this.colorRed,
+    required this.colorBlack2,
   });
 }

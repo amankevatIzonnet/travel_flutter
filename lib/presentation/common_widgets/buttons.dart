@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:travel_flutter/utils/extensions.dart';
 
-Widget iconButton(Widget icon,String text,Function() onTap,{Color? backgroundColor,Color? fontColor}){
+Widget iconButton(
+  Widget icon,
+  String text,
+  Function() onTap, {
+  Color? backgroundColor,
+  Color? fontColor,
+}) {
   return Builder(
     builder: (context) {
       return InkWell(
@@ -13,7 +19,7 @@ Widget iconButton(Widget icon,String text,Function() onTap,{Color? backgroundCol
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: backgroundColor,
-            border: Border.all(color: Colors.grey,width: .3),
+            border: Border.all(color: Colors.grey, width: .3),
             borderRadius: BorderRadius.circular(30),
           ),
           child: Row(
@@ -21,12 +27,15 @@ Widget iconButton(Widget icon,String text,Function() onTap,{Color? backgroundCol
             children: [
               icon,
               10.width(),
-              Text(text,style: TextStyle(color: fontColor,fontWeight: FontWeight.bold),),
+              Text(
+                text,
+                style: TextStyle(color: fontColor, fontWeight: FontWeight.bold),
+              ),
             ],
           ),
         ),
       );
-    }
+    },
   );
 }
 
@@ -51,13 +60,14 @@ Widget button(String text, Function() onTap) {
     },
   );
 }
-Widget backButton({Function()? onPressed}){
+
+Widget backButton({Function()? onPressed}) {
   return Builder(
     builder: (context) {
       return IconButton(
         onPressed: onPressed ?? context.pop,
-        icon: Icon(Icons.arrow_back_ios),
+        icon: Icon(Icons.arrow_back_ios, color: context.themeOption.colorBlack),
       );
-    }
+    },
   );
 }

@@ -26,6 +26,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: context.themeOption.colorWhite,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -125,19 +126,36 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       activeColor: context.themeOption.colorPrimary,
                     ),
                     Expanded(
-                      child: RichText(text: TextSpan(
-                        text: 'I agree to the ',style: TextStyle(color: context.themeOption.colorHintText),
-                        children: [
-                          TextSpan(text: 'Terms and Conditions ',style: TextStyle(color: context.themeOption.colorPrimary,fontWeight: FontWeight.bold)),
-                          TextSpan(text: 'and '),
-                          TextSpan(text: 'Privacy Policy',style: TextStyle(color: context.themeOption.colorPrimary,fontWeight: FontWeight.bold)),
-                        ]
-                      )),
+                      child: RichText(
+                        text: TextSpan(
+                          text: 'I agree to the ',
+                          style: TextStyle(
+                            color: context.themeOption.colorHintText,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: 'Terms and Conditions ',
+                              style: TextStyle(
+                                color: context.themeOption.colorPrimary,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            TextSpan(text: 'and '),
+                            TextSpan(
+                              text: 'Privacy Policy',
+                              style: TextStyle(
+                                color: context.themeOption.colorPrimary,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ],
                 ),
                 20.height(),
-                button("Create Account", ()=>context.push(RoutePaths.home)),
+                button("Create Account", () => context.push(RoutePaths.home)),
                 20.height(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -161,25 +179,59 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       width: 60,
                       color: context.themeOption.colorTextLabel,
                     ),
-
                   ],
                 ),
                 20.height(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    iconButton(SvgPicture.asset(Assets.googleLogo,height: 20,width: 20,), "Google",(){},backgroundColor: Colors.white70,fontColor: Colors.black ),
-                    iconButton(SvgPicture.asset(Assets.appleLogo,height: 20,width: 20,color: Colors.white,), "Apple",(){},backgroundColor:Colors.black,fontColor: Colors.white ),
+                    iconButton(
+                      SvgPicture.asset(
+                        Assets.googleLogo,
+                        height: 20,
+                        width: 20,
+                      ),
+                      "Google",
+                      () {},
+                      backgroundColor: Colors.white70,
+                      fontColor: Colors.black,
+                    ),
+                    iconButton(
+                      SvgPicture.asset(
+                        Assets.appleLogo,
+                        height: 20,
+                        width: 20,
+                        color: Colors.white,
+                      ),
+                      "Apple",
+                      () {},
+                      backgroundColor: Colors.black,
+                      fontColor: Colors.white,
+                    ),
                   ],
                 ),
                 20.height(),
                 Align(
                   alignment: Alignment.center,
-                  child: RichText(text: TextSpan(text: 'Already have an account? ',
-                  style: TextStyle(color: context.themeOption.colorHintText,fontSize: 16),
-                  children: [
-                    TextSpan(text: 'Login',style: TextStyle(color: context.themeOption.colorPrimary,fontWeight: FontWeight.bold),recognizer: TapGestureRecognizer()..onTap = () => context.push(RoutePaths.login)),
-                  ]),
+                  child: RichText(
+                    text: TextSpan(
+                      text: 'Already have an account? ',
+                      style: TextStyle(
+                        color: context.themeOption.colorHintText,
+                        fontSize: 16,
+                      ),
+                      children: [
+                        TextSpan(
+                          text: 'Login',
+                          style: TextStyle(
+                            color: context.themeOption.colorPrimary,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () => context.push(RoutePaths.login),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
