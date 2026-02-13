@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:theme_provider/theme_provider.dart';
 
@@ -11,7 +13,7 @@ var lightTheme = AppTheme(
     colorPrimary: primaryColor,
     colorBlack: Colors.black,
     colorBlack2: const Color(0xFF0F1729),
-    colorWhite: Colors.white,
+    colorWhite: Color.fromARGB(255, 214, 218, 227),
     colorWhite2: Colors.white.withValues(alpha: 0.45),
     colorText: const Color(0xff2D3333),
     colorTextLabel: const Color(0xff9F9F9F),
@@ -29,7 +31,7 @@ var darkTheme = AppTheme(
     colorPrimary: primaryColor,
     colorBlack: Colors.white,
     colorBlack2: Colors.white,
-    colorWhite: const Color(0xFF101922),
+    colorWhite: Color(0xFF0F1729),
     colorWhite2: Colors.black.withValues(alpha: 0.35),
     colorText: const Color(0xffe3e5e5),
     colorTextLabel: const Color(0xff9F9F9F),

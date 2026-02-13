@@ -7,10 +7,7 @@ import 'package:travel_flutter/utils/extensions.dart';
 class BottomNavigationScreen extends StatelessWidget {
   final Widget child;
 
-  const BottomNavigationScreen({
-    super.key,
-    required this.child,
-  });
+  const BottomNavigationScreen({super.key, required this.child});
 
   int _calculateSelectedIndex(BuildContext context) {
     final location = GoRouterState.of(context).uri.toString();
@@ -71,34 +68,25 @@ class BottomNavigationScreen extends StatelessWidget {
         ),
         child: IconButton(
           onPressed: () => _onItemTapped(1, context),
-          icon: const Icon(
-            Icons.add,
-            color: Colors.white,
-            size: 30,
-          ),
+          icon: const Icon(Icons.add, color: Colors.white, size: 30),
         ),
       ),
-      floatingActionButtonLocation:
-      FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       /// Custom Rounded Bottom Bar
       bottomNavigationBar: Container(
         height: 75,
         padding: const EdgeInsets.symmetric(horizontal: 25),
         decoration: BoxDecoration(
-          color: context.themeOption.colorBlack2,
+          color: context.themeOption.colorWhite,
 
           boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.06),
-              blurRadius: 12,
-            ),
+            BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12),
           ],
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-
             /// Home
             _buildNavItem(
               icon: Icons.explore,
@@ -155,7 +143,9 @@ class BottomNavigationScreen extends StatelessWidget {
         children: [
           Icon(
             icon,
-            color: isSelected ? context.themeOption.colorPrimary : Colors.blueGrey,
+            color: isSelected
+                ? context.themeOption.colorPrimary
+                : Colors.blueGrey,
           ),
           const SizedBox(height: 4),
           Text(
@@ -170,5 +160,4 @@ class BottomNavigationScreen extends StatelessWidget {
       ),
     );
   }
-
 }

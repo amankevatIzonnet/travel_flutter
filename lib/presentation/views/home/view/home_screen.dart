@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:travel_flutter/core/config/route_paths.dart';
-
+import '../widget/top_section.dart';
+import '../widget/travel_section.dart';
+import '../widget/trending_destination_section.dart';
+import '../widget/personalized_section.dart';
 import '../../../../utils/extensions.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,28 +16,30 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.themeOption.colorBlack2,
+      backgroundColor: context.themeOption.colorWhite,
 
       body: SafeArea(
         child: LayoutBuilder(
-          builder: (context, constraints){
-            return  Column(
-              children: [
-                Center(
-                  child: InkWell(
-                    onTap: ()=>context.themeController.setTheme(context.isDarkTheme ? "light" : "dark",),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.blue
-                      ),
-                      child: Text("Next"),
-                    ),
-                  ),
-                )
-              ],
+          builder: (context, constraints) {
+            return SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    TopSection(),
+                    SizedBox(height: 20),
+                    TravelSection(),
+                    20.height(),
+                    TrendingDestinationSection(),
+                    20.height(),
+                    PersonalizedSection(),
+                    20.height(),
+                  ],
+                ),
+              ),
             );
           },
-        
         ),
       ),
     );
