@@ -11,6 +11,7 @@ var lightTheme = AppTheme(
   data: ThemeData(primaryColor: primaryColor, useMaterial3: true),
   options: ThemeOptions(
     colorPrimary: primaryColor,
+    colorLightPrimary: Color(0xFF0F213D),
     colorBlack: Colors.black,
     colorBlack2: const Color(0xFF0F1729),
     colorWhite: Color.fromARGB(255, 214, 218, 227),
@@ -29,6 +30,7 @@ var darkTheme = AppTheme(
   data: ThemeData(primaryColor: primaryColor, useMaterial3: true),
   options: ThemeOptions(
     colorPrimary: primaryColor,
+    colorLightPrimary: Color(0xFF0F213D),
     colorBlack: Colors.white,
     colorBlack2: Colors.white,
     colorWhite: Color(0xFF0F1729),
@@ -43,6 +45,7 @@ var darkTheme = AppTheme(
 
 class ThemeOptions implements AppThemeOptions {
   final Color colorPrimary;
+  final Color colorLightPrimary;
   final Color colorBlack;
   final Color colorBlack2;
   final Color colorWhite;
@@ -64,5 +67,6 @@ class ThemeOptions implements AppThemeOptions {
     required this.colorHintText,
     required this.colorRed,
     required this.colorBlack2,
+    required this.colorLightPrimary,
   });
 }

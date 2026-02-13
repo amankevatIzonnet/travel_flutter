@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import '../../../../utils/extensions.dart';
 
-class PersonalizedSection extends StatelessWidget {
+class PersonalizedSection extends StatefulWidget {
   const PersonalizedSection({super.key});
 
+  @override
+  State<PersonalizedSection> createState() => _PersonalizedSectionState();
+}
+
+class _PersonalizedSectionState extends State<PersonalizedSection> {
   @override
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> items = [

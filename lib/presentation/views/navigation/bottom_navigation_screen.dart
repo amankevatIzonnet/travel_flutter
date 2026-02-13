@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:travel_flutter/core/config/route_paths.dart';
 import 'package:travel_flutter/utils/extensions.dart';
@@ -35,9 +34,9 @@ class BottomNavigationScreen extends StatelessWidget {
         context.go(RoutePaths.trips);
         break;
 
-      case 3:
-        context.go(RoutePaths.trips);
-        break;
+      // case 3:
+      //   context.go(RoutePaths.profile);
+      //   break;
       case 4:
         context.go(RoutePaths.profile);
         break;
@@ -117,7 +116,7 @@ class BottomNavigationScreen extends StatelessWidget {
             _buildNavItem(
               icon: Icons.account_circle_outlined,
               label: "Profile",
-              index: 3,
+              index: 4,
               currentIndex: currentIndex,
               context: context,
             ),
