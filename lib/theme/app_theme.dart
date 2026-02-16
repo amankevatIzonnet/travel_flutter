@@ -11,7 +11,7 @@ var lightTheme = AppTheme(
   data: ThemeData(primaryColor: primaryColor, useMaterial3: true),
   options: ThemeOptions(
     colorPrimary: primaryColor,
-    colorLightPrimary: Color(0xFF0F213D),
+    colorLightPrimary: Color(0xFFF2F4F7),
     colorBlack: Colors.black,
     colorBlack2: const Color(0xFF0F1729),
     colorWhite: Color.fromARGB(255, 214, 218, 227),

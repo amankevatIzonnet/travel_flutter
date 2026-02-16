@@ -3,6 +3,8 @@ import 'package:travel_flutter/presentation/views/profile/widget/points_card.dar
 import 'package:travel_flutter/presentation/views/profile/widget/profile_header.dart';
 import 'package:travel_flutter/presentation/views/profile/widget/trip_card.dart';
 import 'package:travel_flutter/presentation/views/profile/widget/trip_tabs.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../core/config/route_paths.dart';
 import '../../../../utils/extensions.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -25,12 +27,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
               15.height(),
               const PointsCard(),
               const TripTabs(),
-              const TripCard(
+              TripCard(
                 image:
                     'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
                 title: 'Paris, France',
                 date: 'OCT 12 — OCT 18, 2024',
                 status: 'CONFIRMED',
+                onTap: () {
+                  context.go(RoutePaths.trips);
+                },
               ),
               const TripCard(
                 image:

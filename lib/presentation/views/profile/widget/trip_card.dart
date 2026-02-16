@@ -6,12 +6,14 @@ class TripCard extends StatelessWidget {
   final String title;
   final String date;
   final String status;
+  final VoidCallback? onTap;
 
   const TripCard({
     required this.image,
     required this.title,
     required this.date,
     required this.status,
+    this.onTap,
   });
 
   @override
@@ -122,7 +124,7 @@ class TripCard extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: OutlinedButton(
-                    onPressed: () {},
+                    onPressed: onTap,
                     style: OutlinedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 14),
                       side: BorderSide(color: context.themeOption.colorBorder),

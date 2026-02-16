@@ -10,6 +10,7 @@ import 'package:travel_flutter/presentation/views/onboarding/view/onboarding_scr
 import 'package:travel_flutter/presentation/views/profile/view/profile_screen.dart';
 import 'package:travel_flutter/presentation/views/trips/view/trip_screen.dart';
 
+import 'package:travel_flutter/presentation/views/trips/view/trip_detail_screen.dart';
 import '../../presentation/views/saveTrip/view/save_trip_screen.dart';
 
 class AppRouter {
@@ -18,7 +19,7 @@ class AppRouter {
     routes: [
       ShellRoute(
         builder: (context, state, child) {
-          return BottomNavigationScreen(child: child,);
+          return BottomNavigationScreen(child: child);
         },
         routes: [
           GoRoute(
@@ -27,7 +28,8 @@ class AppRouter {
           ),
           GoRoute(
             path: RoutePaths.saveTrip,
-            pageBuilder: (context, state) => MaterialPage(child: SaveTripScreen()),
+            pageBuilder: (context, state) =>
+                MaterialPage(child: SaveTripScreen()),
           ),
           GoRoute(
             path: RoutePaths.trips,
@@ -35,7 +37,8 @@ class AppRouter {
           ),
           GoRoute(
             path: RoutePaths.profile,
-            pageBuilder: (context, state) => MaterialPage(child: ProfileScreen()),
+            pageBuilder: (context, state) =>
+                MaterialPage(child: ProfileScreen()),
           ),
         ],
       ),
@@ -56,6 +59,20 @@ class AppRouter {
       GoRoute(
         path: RoutePaths.register,
         pageBuilder: (context, state) => MaterialPage(child: RegisterScreen()),
+      ),
+      GoRoute(
+        path: RoutePaths.tripDetail,
+        pageBuilder: (context, state) {
+          final extras = state.extra as Map<String, dynamic>;
+          return MaterialPage(
+            child: TripDetailScreen(
+              title: extras['title'],
+              date: extras['date'],
+              duration: extras['duration'],
+              imageUrl: extras['imageUrl'],
+            ),
+          );
+        },
       ),
     ],
   );
