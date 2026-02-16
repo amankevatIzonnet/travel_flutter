@@ -39,13 +39,13 @@ Widget iconButton(
   );
 }
 
-Widget button(String text, Function() onTap) {
+Widget button(String text, Function() onTap, {double? height, double? width}) {
   return Builder(
     builder: (context) {
       return ElevatedButton(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
-          minimumSize: Size(330, 50),
+          minimumSize: Size(width?.toDouble() ?? 330, height?.toDouble() ?? 50),
           elevation: 5,
           backgroundColor: context.themeOption.colorPrimary,
           shape: RoundedRectangleBorder(

@@ -21,9 +21,7 @@ class TripTabs extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 12),
               decoration: BoxDecoration(
-                color: context.isDarkTheme
-                    ? context.themeOption.colorPrimary
-                    : Colors.white,
+                color: context.themeOption.colorPrimary,
                 borderRadius: BorderRadius.circular(24),
                 boxShadow: context.isDarkTheme
                     ? []
@@ -39,9 +37,7 @@ class TripTabs extends StatelessWidget {
                 child: Text(
                   'Upcoming',
                   style: TextStyle(
-                    color: context.isDarkTheme
-                        ? Colors.white
-                        : context.themeOption.colorBlack,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

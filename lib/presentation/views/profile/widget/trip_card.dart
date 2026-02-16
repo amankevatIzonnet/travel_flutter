@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_flutter/theme/app_theme.dart';
 import '../../../../utils/extensions.dart';
 
 class TripCard extends StatelessWidget {
@@ -22,7 +23,7 @@ class TripCard extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(20, 0, 20, 20),
       // padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: context.isDarkTheme ? const Color(0xFF1F2937) : Colors.white,
+        color: context.isDarkTheme ? AppColor.primaryColor2 : Colors.white,
         borderRadius: BorderRadius.circular(20),
         boxShadow: context.isDarkTheme
             ? []

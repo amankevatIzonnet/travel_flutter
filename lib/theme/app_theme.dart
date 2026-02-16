@@ -1,16 +1,17 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:theme_provider/theme_provider.dart';
 
-const Color primaryColor = Color(0xFF137FEC);
+class AppColor {
+  static Color primaryColor = Color(0xFF137FEC);
+  static Color primaryColor2 = Color(0xFF1F2937);
+}
 
 var lightTheme = AppTheme(
   id: 'light',
   description: 'Light Mode',
-  data: ThemeData(primaryColor: primaryColor, useMaterial3: true),
+  data: ThemeData(primaryColor: AppColor.primaryColor, useMaterial3: true),
   options: ThemeOptions(
-    colorPrimary: primaryColor,
+    colorPrimary: AppColor.primaryColor,
     colorLightPrimary: Color(0xFFF2F4F7),
     colorBlack: Colors.black,
     colorBlack2: const Color(0xFF0F1729),
@@ -27,9 +28,9 @@ var lightTheme = AppTheme(
 var darkTheme = AppTheme(
   id: 'dark',
   description: 'Dark Mode',
-  data: ThemeData(primaryColor: primaryColor, useMaterial3: true),
+  data: ThemeData(primaryColor: AppColor.primaryColor, useMaterial3: true),
   options: ThemeOptions(
-    colorPrimary: primaryColor,
+    colorPrimary: AppColor.primaryColor,
     colorLightPrimary: Color(0xFF0F213D),
     colorBlack: Colors.white,
     colorBlack2: Colors.white,
