@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "653681524218",
+    "project_id": "travel-flutter-2da51",
+    "storage_bucket": "travel-flutter-2da51.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653681524218:android:67d07d60b6188206f2b843",
+        "android_client_info": {
+          "package_name": "com.example.travel_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD09ceWvs1u57DURTecmLzGtKTYFgiKrEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
